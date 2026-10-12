@@ -1,0 +1,31 @@
+/* Navigate.css */
+
+/* הופך את אזור הניווט לתיבת Flex אנכית */
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column; /* מסדר את הקישורים אחד מתחת לשני */
+  gap: 10px;              /* מרווח בין קישור לקישור */
+  padding: 20px 10px;     /* מרווח פנימי מהדפנות של ה-Sidebar */
+}
+
+/* עיצוב הקישורים עצמם */
+.nav-item {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;  /* מבטל את קו התחתון של הקישור */
+  border-radius: 6px;     /* פינות מעוגלות */
+  transition: background 0.2s ease;
+}
+
+/* אפקט מעבר עכבר (Hover) */
+.nav-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* עיצוב הקישור הפעיל (העמוד הנוכחי שהמשתמש נמצא בו) */
+.nav-item.active {
+  background-color: #007bff; /* כחול לדוגמה */
+  color: white;              /* טקסט לבן */
+  font-weight: bold;
+}

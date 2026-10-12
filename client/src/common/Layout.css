@@ -1,0 +1,36 @@
+/* מבנה ה-Layout הכללי מלמעלה למטה */
+.layout-container {
+  display: flex;
+  /* flex-direction: column; מסדר את הגוף והפוטר אחד מתחת לשני */
+  min-height: 100vh;      /* מותח את כל האתר לגובה המסך */
+}
+
+/* הגוף שמכיל את התפריט ואת ה-Outlet זה לצד זה */
+.layout-body {
+  display: flex;
+  flex-direction: row;    /* מציב את התפריט ואת התוכן הראשי זה לצד זה */
+  /* flex-grow: 1;           גורם לגוף לתפוס את כל הגובה הפנוי שמעל הפוטר */
+}
+
+/* עיצוב אזור תפריט הצד */
+.sidebar {
+  width: 250px;           /* רוחב תפריט הצד - שנו את זה לפי הצורך */
+  min-width: 250px;       /* מונע מהתפריט להתכווץ במסכים קטנים */
+  background-color: #f4f4f4; /* צבע רקע זמני כדי שתראו את הגבולות */
+  border-left: 1px solid #ddd; /* קו מפריד שמאלי (אם האתר שלכם בעברית - RTL) */
+  /* אם האתר שלכם באנגלית (LTR), שנו ל: border-right: 1px solid #ddd; */
+}
+
+.main-content {
+  flex-grow: 1;
+  width: 100%; /* מוודא שאזור התוכן הראשי לוקח את כל שאר הרוחב הזמין */
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* עיצוב הפוטר
+.layout-footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+} */
